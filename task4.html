@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:Arial, sans-serif;
+      background:#fff;
+    }
+
+    /* NAV */
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      padding:15px 30px;
+      background:#fff;
+      border-bottom:1px solid #eee;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .nav .logo{font-weight:bold; font-size:18px; color:#1b3a57;}
+    .nav a{
+      margin-left:20px;
+      text-decoration:none;
+      color:#444;
+      font-size:14px;
+    }
+
+    /* HERO */
+    .hero{
+      height:380px;
+      background:url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=1600') center/cover;
+      position:relative;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+    }
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+    }
+    .hero-content{
+      position:relative;
+      max-width:700px;
+    }
+    .hero-content h1{margin:0 0 10px; font-size:32px;}
+    .btn{
+      background:#333;
+      padding:10px 20px;
+      color:white;
+      text-decoration:none;
+      border-radius:4px;
+      display:inline-block;
+      margin-top:10px;
+    }
+
+    /* SECTION */
+    .section{
+      text-align:center;
+      padding:50px 20px;
+    }
+    .section p{
+      max-width:700px;
+      margin:auto;
+      color:#666;
+    }
+
+    /* CARDS */
+    .cards{
+      max-width:1100px;
+      margin:40px auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+    .card{
+      background:white;
+      border:1px solid #ddd;
+      border-radius:6px;
+      overflow:hidden;
+    }
+    .card img{
+      width:100%;
+      height:160px;
+      object-fit:cover;
+    }
+    .card-body{
+      padding:20px;
+      text-align:left;
+    }
+    .card-body h3{
+      margin-top:0;
+      color:#1b3a57;
+    }
+    .card-body p{color:#666; font-size:14px;}
+
+    /* FOOTER */
+    .footer{
+      background:#222;
+      color:white;
+      padding:40px 20px;
+      margin-top:50px;
+    }
+    .footer-columns{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+    .footer-bottom{
+      text-align:center;
+      margin-top:20px;
+      font-size:14px;
+      color:#bbb;
+    }
+
+    @media(max-width:800px){
+      .cards{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="logo">WebResponsive</div>
+    <div>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Responsive Web</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae unde alias odit harum maxime.</p>
+      <a href="#" class="btn">Read more</a>
+    </div>
+  </div>
+
+  <!-- Section -->
+  <div class="section">
+    <h2>Responsive Web Development</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum aliquam fugiat molestiae natus.</p>
+  </div>
+
+  <!-- CARDS WITH IMAGES -->
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800" alt="">
+      <div class="card-body">
+        <h3>Why Responsive?</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis placeat odio eum velit.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./Screenshot 2025-12-03 113142.png" alt="">
+      <div class="card-body">
+        <h3>Same Experience Everywhere</h3>
+        <p>Curabitur posuere sapien id mi posuere, a elementum lorem efficitur.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./Screenshot 2025-12-03 113231.png" alt="">
+      <div class="card-body">
+        <h3>Improve Your Accessibility</h3>
+        <p>Lorem ipsum dolor sit amet, elit. Quia placeat reprehenderit.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-columns">
+      <div>
+        <h3>Contact Us</h3>
+        <p>Email: info@webresponsive.com</p>
+      </div>
+      <div>
+        <h3>About Us</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 WebResponsive — All rights reserved.
+    </div>
+  </div>
+
+</body>
+</html>
